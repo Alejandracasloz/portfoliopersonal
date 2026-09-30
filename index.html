@@ -689,6 +689,16 @@ footer p{color:var(--ink-faint); font-size:13.5px;}
         </div>
       </div>
 
+      <div class="proj reveal" data-project="aminstitute" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="proj-media"><span class="img-count" data-count="aminstitute">7 fotos</span><img id="thumb-aminstitute" alt="Landing page y piezas de Ads para AM Institute"><span class="view-hint">Ver proyecto ↗</span></div>
+        <div class="proj-text">
+          <span class="proj-tag">Landing Page · Ads</span>
+          <h3 class="proj-title">AM Institute</h3>
+          <p><b>El proyecto:</b> diseño de landing page y piezas gráficas para una campaña de Ads de AM Institute.</p>
+          <p>[Añade aquí el desafío, la estrategia y el resultado de este proyecto.]</p>
+        </div>
+      </div>
+
       <!-- LOGOFOLIO — continuación de Proyectos -->
       <div class="logofolio-row reveal">
         <div class="logofolio-panel">
@@ -838,7 +848,22 @@ const PROJECTS = {
            <p><b>Adaptación de formatos:</b> orquestación y control estricto de consistencia en más de 15 formatos — Meta Ads, publicidad exterior, banners dinámicos, web y landings.</p>
            <p><b>Optimización:</b> cada pieza ajustada para lograr peso mínimo y máxima velocidad en mobile sin perder impacto visual.</p>`,
     images: [ IMG.proj_multicanal ]
-  },
+  },  aminstitute: {
+    tag: "Landing Page · Ads",
+    title: "AM Institute",
+    body: `<p><b>El proyecto:</b> diseño de landing page y piezas gráficas para una campaña de Ads de AM Institute.</p>
+           <p>[Añade aquí el desafío, la estrategia y el resultado.]</p>
+           <a class="btn btn-solid" href="https://TU-LANDING-AQUI.com" target="_blank" rel="noopener" style="margin-top:10px;">Ver landing page ↗</a>`,
+    images: [
+      "images/AM-01.png",
+      "images/AM-02.png",
+      "images/AM-03.png",
+      "images/AM-04.png",
+      "images/AM-05.png",
+      "images/AM-06.png",
+      "images/AM-07.png"
+    ]
+  }
 };
 
 // Pinta las miniaturas de cada proyecto a partir de PROJECTS (evita duplicar imágenes en el HTML)
@@ -848,6 +873,7 @@ document.getElementById('thumb-uninde-0').src = PROJECTS.uninde.images[0];
 document.getElementById('thumb-uninde-1').src = PROJECTS.uninde.images[1] || PROJECTS.uninde.images[0];
 document.getElementById('thumb-eduker').src = PROJECTS.eduker.images[0];
 document.getElementById('thumb-multicanal').src = PROJECTS.multicanal.images[0];
+document.getElementById('thumb-aminstitute').src = PROJECTS.aminstitute.images[0];
 Object.keys(PROJECTS).forEach(k => {
   const el = document.querySelector(`.img-count[data-count="${k}"]`);
   if(el){ const n = PROJECTS[k].images.length; el.textContent = n + (n===1 ? " foto" : " fotos"); el.style.display = n>1 ? "inline-flex" : "none"; }
